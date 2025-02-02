@@ -1,0 +1,6 @@
+Customer,Tenure (months),Monthly Charges ($),Churn Prediction,Retention Actions
+Customer 1,2,95,High Risk,"🚀 Offer discounts on renewal to increase tenure, 💡 Suggest cheaper bundles to reduce costs"
+Customer 2,60,55,Low Risk,"✅ Customer is stable, maintain engagement"
+Customer 3,24,75,Medium Risk,"🤝 Provide targeted offers based on usage patterns, 💡 Offer mid-tier plans to balance cost"
+Customer 4,5,100,High Risk,"🚀 Offer discounts on renewal to increase tenure, 💡 Suggest cheaper bundles to reduce costs"
+Customer 5,50,65,Low Risk,"✅ Customer is stable, maintain engagement"
