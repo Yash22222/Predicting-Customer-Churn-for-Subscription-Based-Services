@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Predict Churn</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>🔮 Predict Churn</h2>
+
+        <!-- 🔔 Flash Messages Section -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        <!-- 🔔 End Flash Messages Section -->
+
+        <form action="/predict" method="POST">
+            <label>Select Customer:</label>
+            <select name="customer_id" required>
+                {% for customer in customers %}
+                    <option value="{{ customer.customer_id }}">{{ customer.name }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Fetch Records</button>
+        </form>
+
+        {% if records %}
+            <h3>Customer Records</h3>
+            <table>
+                <tr>
+                    <th>Tenure</th>
+                    <th>Monthly Charges</th>
+                    <th>Contract Type</th>
+                    <th>Payment Method</th>
+                    <th>Probability</th>
+                    <th>Risk Level</th>
+                </tr>
+                {% for record in records %}
+                <tr>
+                    <td>{{ record.tenure }}</td>
+                    <td>{{ record.monthly_charges }}</td>
+                    <td>{{ "One Year" if record.Contract_OneYear else "Two Year" if record.Contract_TwoYear else "Month-to-Month" }}</td>
+                    <td>{{ "Credit Card" if record.PaymentMethod_CreditCard else "Electronic Check" if record.PaymentMethod_ElectronicCheck else "Mailed Check" }}</td>
+                    <td>{{ record.probability }}</td>
+                    <td>{{ record.prediction }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <form action="/predict_churn" method="POST">
+                <input type="hidden" name="customer_id" value="{{ selected_customer_id }}">
+                <button type="submit">Predict Churn</button>
+            </form>
+        {% endif %}
+    </div>
+
+</body>
+</html>
+ 
