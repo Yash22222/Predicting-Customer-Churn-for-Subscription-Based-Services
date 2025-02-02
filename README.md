@@ -133,6 +133,6 @@ This project is licensed under the **MIT License**.
 
 ## ⭐ **Support & Feedback**
 Found this project useful? **Give it a star ⭐ on GitHub!**  
-For feedback & issues, open a **GitHub Issue** or contact **[Your Email]**.  
+For feedback & issues, open a **GitHub Issue**.  
 
 ---
