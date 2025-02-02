@@ -1,4 +1,5 @@
-flask==2.2.3
+flask>=2.3.0
+werkzeug>=2.1.0
 twilio==8.2.0
 joblib==1.2.0
 pandas==1.5.3
