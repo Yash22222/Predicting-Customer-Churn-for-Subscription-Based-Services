@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Customer</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>➕ Add New Customer</h2>
+        
+        <!-- 🔔 Flash Messages Section -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        <!-- 🔔 End Flash Messages Section -->
+
+        <form action="/add_customer" method="POST">
+            <label>Name:</label>
+            <input type="text" name="name" required>
+
+            <label>Mobile:</label>
+            <input type="text" name="mobile" required pattern="\d{10}" title="Enter a valid 10-digit mobile number">
+
+            <label>Email:</label>
+            <input type="email" name="email" required>
+
+            <label>Location (City):</label>
+            <input type="text" name="location" required>
+
+            <button type="submit">Add Customer</button>
+        </form>
+    </div>
+
+</body>
+</html>
