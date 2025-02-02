@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Churn Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>📊 Customer Churn Prediction</h2>
+
+        <!-- 🔔 Flash Messages Section -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        <!-- 🔔 End Flash Messages Section -->
+
+        <button onclick="location.href='{{ url_for('add_customer') }}'">➕ Add Customer</button>
+        <button onclick="location.href='{{ url_for('add_record') }}'">📝 Add Record</button>
+        <button onclick="location.href='{{ url_for('predict') }}'">🔮 Predict Churn</button>
+    </div>
+
+</body>
+</html>
