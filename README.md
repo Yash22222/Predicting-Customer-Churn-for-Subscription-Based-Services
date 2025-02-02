@@ -120,9 +120,9 @@ Can be deployed on:
 ---
 
 ## 🤝 **Contributors**
-👨‍💻 **Your Name** - Data Science & ML Engineer  
-👩‍💻 **Team Member 2** - Web Developer  
-👨‍💻 **Team Member 3** - Database & API Specialist  
+👨‍💻 **Yash Shirsath** - Data Science & ML Engineer  
+👩‍💻 **Yash Chaudhary** - Web & Backend Developer  
+👨‍💻 **Vedant Bhosale** - Database & API Specialist  
 
 ---
 
