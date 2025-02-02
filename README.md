@@ -120,9 +120,9 @@ Can be deployed on:
 ---
 
 ## 🤝 **Contributors**
-👨‍💻 **Yash Shirsath** - Data Science & ML Engineer  
-👩‍💻 **Yash Chaudhary** - Web & Backend Developer  
-👨‍💻 **Vedant Bhosale** - Database & API Specialist  
+👨‍💻 **Yash Shirsath** - Data Scientist & ML Engineer  
+👩‍💻 **Yash Chaudhary** - Gen AI & Backend Developer  
+👨‍💻 **Vedant Bhosale** - Security Analyst, DB & API Specialist  
 
 ---
 
