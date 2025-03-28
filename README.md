@@ -131,7 +131,6 @@ This project is licensed under the **Apache License 2.0**.
 ---
 
 ## ⭐ **Support & Feedback**
-Found this project useful? **Give it a star ⭐ on GitHub!**  
-For feedback & issues, open a **GitHub Issue**.  
+Found this project useful? **Give it a star ⭐ on GitHub!**  Also For feedback & Issues, open a **GitHub Issue**.  
 
 ---
